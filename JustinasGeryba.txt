@@ -1,0 +1,12 @@
+INSERT INTO `komunalines`(`Nr.`, `Gyventojø skaièius`, `Objekto tipas`, `Objekto plotas (kv. m)`, `Rinkliava uþ atliekø tvarkymà (per metus) (Eur)`) VALUES (1,5,"Namas",300.25,12.9);
+INSERT INTO `komunalines`(`Nr.`, `Gyventojø skaièius`, `Objekto tipas`, `Objekto plotas (kv. m)`, `Rinkliava uþ atliekø tvarkymà (per metus) (Eur)`) VALUES (2,3,"Butas",60.5,12.9);
+INSERT INTO `komunalines`(`Nr.`, `Gyventojø skaièius`, `Objekto tipas`, `Objekto plotas (kv. m)`, `Rinkliava uþ atliekø tvarkymà (per metus) (Eur)`) VALUES (3,4,"Butas",35.9,12.9);
+INSERT INTO `komunalines`(`Nr.`, `Gyventojø skaièius`, `Objekto tipas`, `Objekto plotas (kv. m)`, `Rinkliava uþ atliekø tvarkymà (per metus) (Eur)`) VALUES (4,1,"Namas",200.41,12.9);
+INSERT INTO `komunalines`(`Nr.`, `Gyventojø skaièius`, `Objekto tipas`, `Objekto plotas (kv. m)`, `Rinkliava uþ atliekø tvarkymà (per metus) (Eur)`) VALUES (5,2,"Namas",250.50,12.9);
+
+1.SELECT SUM(objektoPlotas) as Plotas_viso FROM komunalines;
+2.SELECT * FROM komunalines WHERE objektoTipas LIKE 'Namas' ORDER BY gyventojuSk DESC;
+3.SELECT * FROM komunalines WHERE objektoPlotas <100;
+4.SELECT objektoTipas as Objektai, SUM(gyventojuSk) as Gyventojai FROM komunalines GROUP BY objektoTipas;
+5.SELECT * FROM komunalines WHERE objektoPlotas = (SELECT MAX(objektoPlotas) FROM komunalines);
+ 
